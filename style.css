@@ -1,0 +1,168 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 10px;
+    font-style: normal;
+}
+:root{
+    --border: 1px solid black;
+    --padding: 10px;
+    --radius:5px;
+    --blue: #caf0f8;
+    --blue2: #90e0ef;
+    --blue3 :#00b4d8;
+    --white:rgb(255, 255, 255);
+    --blue4:var(--blue3);
+    --shadow: 0px 1px 1px 0px black;
+}
+body{
+    background-color: #caf0f8;
+}
+h4{
+    margin-bottom:5px;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.logo img{
+    max-width: 37px;
+    min-height: 37px;
+    border-radius: var(--radius);
+}
+.flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0px 0px 1px 0px black;
+    color: var(--blue4);
+    background-color: white;
+}
+.container{
+    padding: 15px 40px;
+}
+.flex ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.flex a{
+    text-decoration: none;
+    color: black;
+}
+.flex a:hover{
+    color: var(--blue3);
+}
+.flex input{
+    width: 100%;
+    padding: var(--padding);
+}
+.wrapper1{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: auto;
+    grid-template-areas: 
+    "container1 container2"
+    "container1 container3";
+    gap: 40px;
+    padding:15px;
+}
+.container1{
+    grid-area: container1;
+
+}
+.container-card{
+    padding: 20px;
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+    box-shadow: var(--shadow);
+    background-color: var(--white);
+}
+.container2{
+    grid-area: container2;
+}
+.profile-card{
+    display: flex;
+    align-items: center;
+    padding: 0px 15px;
+    grid-area: container2;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    min-height: 200px;
+    background-color: var(--blue3);
+    color: var(--white);
+}
+.name-rank h1{
+    font-size: 2rem;
+}
+.container3{
+    grid-area: container3;
+}
+.battle-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+    grid-area: container3;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    background-color: var(--white);
+}
+.trading-card{
+    box-shadow: 0px 1px 1px 0px black;
+    border-radius: var(--radius);
+    padding: var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80px;
+}
+.trader-profile{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.trader-profile img{
+    background-color: var(--blue2);
+    max-width: 37px;
+    min-height:37px;
+    border-radius: 100%;
+}
+.more{
+    display: flex;
+    justify-content: center;
+}
+.main-player-card{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.main-player-card img{
+    max-width: 130px;
+    min-height: 130px;
+    background-color: var(--blue2);
+    box-shadow: 1px 1px 0px 1px rgb(84, 135, 211);
+    border-radius: 100%;
+
+}
+@media(max-width : 1045px){
+    .wrapper1{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "container2"
+        "container1"
+        "container3"
+        ;
+    }
+}
